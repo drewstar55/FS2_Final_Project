@@ -1,0 +1,102 @@
+{
+  "client" : [ {
+    "address" : "232 Bayview Ave",
+    "birthdate" : "01/05/70",
+    "city" : "Toronto",
+    "email" : "drewjones@gmail.com",
+    "name" : "Drew Jones",
+    "phone" : "(416) 867-5309",
+    "postcode" : "M7W 3D5",
+    "uid" : "T5gQ7lCUZpNy0eefPtJSRn5yPAT2"
+  }, {
+    "address" : "2310 Main St",
+    "birthdate" : "30/12/77",
+    "city" : "Uxbridge",
+    "email" : "sandy@earthling.net",
+    "name" : "Sandra Knight",
+    "phone" : "(905) 435-0983",
+    "postcode" : "L9P 1A1",
+    "uid" : "T5gQ7lCUZpNy0eefPtJSRn5yPAT2"
+  }, {
+    "address" : "650 Bridge St",
+    "birthdate" : "02/10/82",
+    "city" : "Coppins Corners",
+    "email" : "jillf@yahoo.com",
+    "name" : "Jill Firestone",
+    "phone" : "(905) 887-1213",
+    "postcode" : "L9P 1R2",
+    "uid" : "T5gQ7lCUZpNy0eefPtJSRn5yPAT2"
+  }, {
+    "address" : "12 Wolverhampton Rd",
+    "birthdate" : "10/28/91",
+    "city" : "East York",
+    "email" : "samsingh@gmail.com",
+    "name" : "Sammy Singh",
+    "phone" : "(647) 553-7673",
+    "postcode" : "M3E 2W3",
+    "uid" : "T5gQ7lCUZpNy0eefPtJSRn5yPAT2"
+  }, {
+    "address" : "2560 Bloor St",
+    "birthdate" : "11/22/62",
+    "city" : "Mississauga",
+    "email" : "bartholemew@gmail.com",
+    "name" : "Bart Black",
+    "phone" : "(905) 354-9805",
+    "postcode" : "M7R 2E2",
+    "uid" : "T5gQ7lCUZpNy0eefPtJSRn5yPAT2"
+  }, {
+    "address" : "452 Yonge St",
+    "birthdate" : "09/18/78",
+    "city" : "Pickering",
+    "email" : "julie@gmail.com",
+    "name" : "Julie Hemmingway",
+    "phone" : "(905) 548-9008",
+    "postcode" : "M2K 1W7",
+    "uid" : "LsttKlfguOT5meF0OlJMrR72llZ2"
+  }, {
+    "address" : "88 Staten Ave",
+    "birthdate" : "01/14/86",
+    "city" : "Toronto",
+    "email" : "james@aol.com",
+    "name" : "James Bradbury",
+    "phone" : "(416) 842-8971",
+    "postcode" : "M1J 2T3",
+    "uid" : "LsttKlfguOT5meF0OlJMrR72llZ2"
+  }, {
+    "address" : "8338 Over Ave",
+    "birthdate" : "01/14/86",
+    "city" : "Toronto",
+    "email" : "fred@aol.com",
+    "name" : "Fred Gutenberg",
+    "phone" : "(416) 842-8971",
+    "postcode" : "M1J 2T3",
+    "uid" : "LsttKlfguOT5meF0OlJMrR72llZ2"
+  }, {
+    "address" : "8228 Staten Ave",
+    "birthdate" : "01/12/86",
+    "city" : "Toronto",
+    "email" : "delia@aol.com",
+    "name" : "Delia Smith-Jones",
+    "phone" : "(416) 842-8971",
+    "postcode" : "M1J 2T3",
+    "uid" : "LsttKlfguOT5meF0OlJMrR72llZ2"
+  }, {
+    "address" : "22 Wintergarden Dr",
+    "birthdate" : "01/22/99",
+    "city" : "Ottawa",
+    "email" : "johnathan@aol.com",
+    "name" : "Johnathan Ricard",
+    "phone" : "(808) 332-9563",
+    "postcode" : "N7R 2T3",
+    "uid" : "LsttKlfguOT5meF0OlJMrR72llZ2"
+  },{
+    "address" : "44 Huggins Ave",
+    "birthdate" : "04/14/86",
+    "city" : "Toronto",
+    "email" : "nadia@aol.com",
+    "name" : "Nadia Drimmie",
+    "phone" : "(416) 333-8971",
+    "postcode" : "M1J 4P0",
+    "uid" : "LsttKlfguOT5meF0OlJMrR72llZ2"
+  } ]
+}

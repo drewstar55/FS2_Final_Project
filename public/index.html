@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In</title>
+    <link rel="stylesheet" href="css/fs2_fp_css.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase.js"></script>
+    <script type="text/javascript">
+        // firebase config
+        var firebaseConfig = {
+            apiKey: "AIzaSyCFU7tEY_Sy2AHoCO5BH_Qz0xsDamOkUPo",
+            authDomain: "fs2-final-project-68e14.firebaseapp.com",
+            databaseURL: "https://fs2-final-project-68e14.firebaseio.com",
+            projectId: "fs2-final-project-68e14",
+            storageBucket: "fs2-final-project-68e14.appspot.com",
+            messagingSenderId: "836919312735",
+            appId: "1:836919312735:web:fea715bcf6dbe9f2f036ea",
+            measurementId: "G-7YPSFMRB1M"
+        };
+        firebase.initializeApp(firebaseConfig);
+        // initialize to user signed out, force a new sign in
+        firebase.auth().signOut();
+        
+        function toggleSignIn() {
+            if (firebase.auth().currentUser) {
+                firebase.auth().signOut();
+            } else {
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                if (email.length < 4) {
+                    alert('Please enter a valid Google email address.');
+                    return;
+                }
+                if (password.length < 4) {
+                    alert('Please enter a valid Google password.');
+                    return;
+                }
+                firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    if (errorCode === 'auth/wrong-password') {
+                        alert('Incorrect Google password for this username.');
+                    } else {
+                        alert(errorMessage);
+                    }
+                    console.log(error);
+                });
+            }
+        }
+        /////
+        function initApp() {
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    document.getElementById('logged').innerHTML =
+                    '<div class="spinner-border text-primary" role="status"></div>';
+                    // open the client management window after a brief pause to display
+                    // authentication success
+                    setTimeout(function(){ window.open("client.html?uid=" + user.uid, "_self"); }, 2000);
+                    //console.log("Open client window.");
+                }
+        });
+      document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
+    }
+    /////
+    window.onload = function() {
+      initApp();
+    };
+    </script>
+    </head>
+    <body>
+        <h1>Sign In &nbsp;&nbsp;&#10042;&nbsp;&nbsp; Client Management</h1>
+        <div id="loginForm" class="form-group">
+            <input type="text" class="form-control" placeholder="Username" name="email" id="email">
+            <br>
+            <input type="password" class="form-control pwd" placeholder="Password" name="password" id="password">
+            <br>
+            <button class="btn btn-primary" id="quickstart-sign-in" name="signin">Sign In</button>&nbsp;&nbsp;&nbsp;&nbsp;<span id="logged"></span>
+        <div>
+    </body>
+    </html>

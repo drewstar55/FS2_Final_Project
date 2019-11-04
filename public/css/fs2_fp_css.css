@@ -1,0 +1,200 @@
+body, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+span {
+    vertical-align: bottom;
+}
+
+h1 {
+    padding: 20px;
+    color: white;
+    background: #e67e22;
+}
+
+/* read clients */
+#clientList {
+    padding: 0;
+    width: 240px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid black;
+}
+
+#clientList h2 {
+    padding: 10px;
+    margin: 0;
+    color: black;
+}
+
+#clientList li {
+    padding: 5px 5px;
+    cursor: pointer;
+    color: black;
+    background: gainsboro;
+}
+
+#clientList li:hover {
+    background: #e67e22;
+    color: white;
+}
+
+#clientDetail {
+    float: left;
+    width: 280px;
+    margin-top: 10px;
+    margin-left: 15px;
+    padding: 10px;
+    border: 1px solid black;
+    color: black;
+    background: #e67e22;
+    display: none;
+}
+
+/* Add */
+#add-client-module {
+    /* position of the New btn and the form underneath*/
+    position: fixed;
+    margin-bottom: 0px;
+    margin-left: 543px;
+    margin-top: -60px;
+}
+
+#add-client-module #open-add-client-form-btn {
+    margin-top: 0px;
+    margin-left: 16px; 
+}
+
+#add-client-module form {
+    margin-top: 32px;
+    margin-left: 16px;   
+    padding: 10px;
+    width: 280px;
+    height: 420px;
+    background-color: gainsboro;
+    border: 1px solid black;
+    display: none;
+}
+
+#add-client-module form input {
+    width: 97%;
+    margin: 0px 0px 3px 0px;
+}
+
+#add-client-module:hover form {
+    display: block;
+}
+
+/* User Profile */
+#user-profile-module {
+    /* position of the New btn and the form underneath*/
+    position: fixed;
+    margin-bottom: 0px;
+    margin-left: 783px;
+    margin-top: -60px;
+}
+
+#user-profile-module #open-user-profile-form-btn {
+    margin-top: 0px;
+    margin-left: 16px; 
+}
+
+#user-profile-module form {
+    margin-top: 32px;
+    margin-left: 16px;   
+    padding: 10px;
+    width: 300px;
+    height: 370px;
+    background-color: gainsboro;
+    border: 1px solid black;
+    display: none;
+}
+
+#user-profile-module form input {
+    width: 97%;
+    margin: 0px 0px;
+}
+
+#user-profile-module:hover form {
+    display: block;
+}
+
+/* System Info */
+#system-info-module {
+    /* position of the New btn and the form underneath*/
+    position: fixed;
+    margin-bottom: 0px;
+    margin-left: 1026px;
+    margin-top: -60px;
+}
+
+#system-info-module #open-system-info-form-btn {
+    margin-top: 0px;
+    margin-left: 16px; 
+}
+
+#system-info-module form {
+    margin-top: 32px;
+    margin-left: 16px;   
+    padding: 10px;
+    width: 280px;
+    height: 420px;
+    background-color: gainsboro;
+    color: black;
+    border: 1px solid black;
+    display: none;
+}
+
+#system-info-module #div-info {
+    padding:10px;
+    background-color: gainsboro;
+    color: black;
+    max-height: 320px;
+    overflow: scroll;
+    overflow-x: hidden; 
+}
+
+#system-info-module:hover form {
+    display: block;
+}
+
+/*Edit*/
+#edit-client-module {
+    position: fixed;
+    width: 280px;
+    height: 420px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: gainsboro;
+    margin-top: 10px;
+    margin-left: 265px;  
+    display: none;
+}
+
+#client-list li:hover~#edit-client-module {
+    display: none;
+}
+
+#edit-client-module form input {
+    width: 97%;
+    margin: 0px 0px 3px 0px;
+}
+
+/* Login Form */
+#loginForm {
+    padding: 10px;
+    margin-top: 18px;
+    margin-left: 10px;   
+    width: 280px;
+    height: 370px;
+    background-color: gainsboro;
+    border: 1px solid black;
+    display: block;
+}

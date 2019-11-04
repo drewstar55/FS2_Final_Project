@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Client Management</title>
+        <link rel="stylesheet" href="css/fs2_fp_css.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>&#10042;&nbsp;&nbsp;Client Data</h1>
+        <ul id="clientList"></ul>
+        <div id="clientDetail"></div>
+        
+        <!-- add client module -->
+        <section id="add-client-module">
+            <button id="open-add-client-form-btn" class="btn btn-light">Add Client</button>
+            <form>
+                <legend>Add Client</legend>
+                <input type='text' data-key='address' class='client-input' placeholder='address'>
+                <input type='text' data-key='birthdate' class='client-input' placeholder='birth date [MM/DD/YY]'>
+                <input type='text' data-key='city' class='client-input' placeholder='city'>
+                <input type='text' data-key='email' class='client-input' placeholder='email [a@b.c]'>
+                <input type='text' data-key='name' class='client-input' placeholder='name'>
+                <input type='text' data-key='phone' class='client-input' placeholder='phone [(999) 999-9999]'>
+                <input type='text' data-key='postcode' class='client-input' placeholder='postal code [X1X 1X1]'><br><br>
+                <button type='button' id="add-client-btn" class="btn btn-light">Save</button>
+                <button type='button' id="cancel-add-client-btn" class="btn btn-light">Clear</button>
+            </form>
+        </section>
+        <!-- user profile module -->
+        <section id="user-profile-module">
+            <button id="open-user-profile-form-btn" class="btn btn-light">User Profile</button>
+            <form>
+                <legend>User Profile</legend>
+                    <div class="form-group"></div>
+                        <input type='text' id='email' class='form-control' aria-describedby="emailHelp" readonly>
+                        <small id="emailHelp" class="form-text text-muted">Google authenticating email</small><br>
+                        <input type='text' id='userid' class='form-control' aria-describedby="useridHelp" readonly>
+                        <small id="useridHelp" class="form-text text-muted">Account user ID</small><br><br>    
+                    </div>
+            </form>
+        </section>
+        <!-- system info module -->
+        <section id="system-info-module">
+                <button id="open-system-info-form-btn" class="btn btn-light">About</button>
+                <form>
+                    <legend>About</legend>
+                    <div class="form-group"><hr>
+                            <div id="div-info">
+                                <span>Web application with CRUD interface, utilizing HTML,
+                                      JavaScript, CSS and a Firebase Realtime Database backend.</span><br>
+                                <hr><br>
+                                <img class="img-thumbnail" src="img/andrew.jpg"><br>
+                                <span>Andrew Starling</span><br>
+                                <span>100191710</span><br>
+                                <span><a href='mailto:tobogganhill@gmail.com'>tobogganhill@gmail.com</a></span><br><br>
+                                <span>Frontend programmer in the 1990s |
+                                      cooking in various restaurants for the past 20 years |
+                                      currently a student of Blockchain Development.</span><br>
+                            </div>
+                    </div>
+                </form>
+        </section>
+        <!-- edit client module -->
+        <section id="edit-client-module">
+            <form>
+                <legend>Edit Client Details</legend>
+                <input type='text' data-key='address' class='edit-client-input' placeholder='address'>
+                <input type='text' data-key='birthdate' class='edit-client-input' placeholder='birth date [MM/DD/YY]'>
+                <input type='text' data-key='city' class='edit-client-input' placeholder='city'>
+                <input type='text' data-key='email' class='edit-client-input' placeholder='email [a@b.c]'>
+                <input type='text' data-key='name' class='edit-client-input' placeholder='name'>
+                <input type='text' data-key='phone' class='edit-client-input' placeholder='phone [(999) 999-9999]'>
+                <input type='text' data-key='postcode' class='edit-client-input' placeholder='postal code [X1X 1X1]'><br><br>
+                <button type='button' id="edit-client-btn" class="btn btn-light">Save</button>
+                <button type='button' id="cancel-edit-client-btn" class="btn btn-light">Cancel</button>
+                <input type="hidden" class="edit-clientID">
+            </form>
+        </section>
+        <!-- The core Firebase JS SDK -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-storage.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
